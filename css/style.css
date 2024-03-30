@@ -1,0 +1,761 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Spline Sans", sans-serif;
+}
+.header{
+    width: 100%;
+    height: 55px;
+    background-color: rgb(43, 41, 41, 0.7);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.logo{
+    width: 55px;
+    height: 100%;
+    float: left;
+    border-radius: 50%;
+    margin-left: 180px;
+}
+.list{
+    text-decoration: none;
+    float: right;
+    margin-right: 130px;
+}
+.list a{
+    text-decoration: none;
+    color: fff;
+}
+.list li {
+    display: inline-block;
+    font-size: 17px;
+    position: relative;
+    height: 100%;
+    padding: 18px 0 ;
+    margin-left: 15px;
+}
+.list li::after{
+    content: " ";
+    position: absolute;
+    background-color:  rgb(142, 132, 60);
+    width: 0px;
+    height: 3px;
+    top: 42px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1.5s;
+}
+.list li:hover::after , .list .li1::after{
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+.list  a:hover{
+    color: rgb(142, 132, 60);
+}
+.blog_post{
+    width: 120px;
+    height: 50px;
+    top: 55px;
+    right: 180px;
+    position: absolute;
+    background-color:rgb(98, 91, 41);
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 15px;
+    visibility: hidden;
+}
+.blog:hover .blog_post{
+    visibility: visible;
+}
+.header_container{
+    position: relative;
+    background-image: url(../images/cover.png);
+    height: 100vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+    font-family: "Lato", sans-serif;
+    word-spacing: 3px;
+}
+.cover{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
+}
+.contact{
+    width: 100%;
+    color: fff ;
+    position: absolute;
+    text-align: center;
+    padding-top: 320px;
+}
+.contact h1{
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+.contact button{
+    margin-top: 10px;
+    width: 110px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.contact .btn1:hover{
+    background-color: rgb(199, 198, 198);
+}
+.contact .btn2{
+    background-color: rgb(142, 132, 60);
+    color: fff;
+}
+.contact .btn2:hover{
+    background-color: rgb(124, 116, 52);
+}
+
+/*/////////////////////////////////////////////*/
+ 
+.welcome_container{
+    height: 99vh;
+    width: 80%;
+    margin: auto;
+}
+.section_caption{
+    text-align: center;
+    padding-top: 150px;
+    font-size: 35px;
+}
+.line{
+    width: 70px;
+    height: 4px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    background-color: rgb(142, 132, 60);
+}
+.welcome_content{
+    width: 100%;
+    height: 220px;
+}
+.welcome_card2{
+    margin: 0 5%;
+}
+.welcome_card{
+    float: left;
+    width: 30%;
+    height: inherit;
+    border: 1px solid black;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    transition: 0.5s;
+}
+.welcome_card::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    background-color: #525252;
+    transition: 0.5s;
+    z-index: -1;
+}
+.welcome_card:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    overflow: visible;
+}
+.welcome_icon{
+    color: rgb(142, 132, 60);
+    font-size:30px;
+}
+.welcome_card h1{
+    font-size: 27px;
+    margin: 10px 10px;
+}
+.welcome_card p{
+    font-size: 18px;
+    color: #525252;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-family: "M PLUS 1p", sans-serif;
+}
+.welcome_card:hover{
+    color: aliceblue;
+}
+.welcome_card:hover  .welcome_p{
+    color: rgb(211, 211, 211);
+    transition: 0.5s;
+}
+.welcome_card a{
+    text-decoration: none;
+    color: rgb(142, 132, 60);
+    font-size:18px;
+}
+.welcome_card a:hover{
+    color: rgb(142, 132, 60);
+}
+
+/*///////////////////////////////////*/
+
+.Feature_container{
+    height: 140vh;
+    background-color: rgb(230, 230, 230);
+}
+.Feature_content{
+    width: 85%;
+    height: 70%;
+    margin: auto;
+}
+.Feature_card{
+    float: left;
+    width: 30%;
+    height: 45%;
+    margin: 18px 20px ;
+    position: relative;
+}
+.Feature_img_cover{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    margin-top: 4%;
+    text-align: center;
+    background-color: #fff;
+}
+.Feature_img_cover img{
+    height: 100%;
+    width: 80%;
+}
+.furniture_category{
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    text-align: center;
+    opacity: 0;
+    transition: 1.2s;
+}
+.furniture_category:hover{
+    opacity: 1;
+    visibility: visible;
+}
+.furniture_category p{
+    margin-top: 130px;
+    color: rgb(142, 132, 60);
+    opacity: 0;
+}
+.furniture_category:hover p{
+    margin-top: 120px;
+    opacity: 1;
+    transition: 0.8s;
+}
+.furniture_category h3{
+    opacity: 0;
+    color: #fff;
+    font-size: 22px;
+    margin: 10px 0;
+}
+.furniture_category:hover h3{
+    margin: 5px 0;
+    opacity: 1;
+    transition: 2s;
+}
+.furniture_category i{
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    padding-top: 10px;
+    color: rgb(74, 67, 17);
+    background-color:rgb(142, 132, 60);
+    margin: 8px 0;
+    opacity: 0;
+}
+.furniture_category:hover i{
+    opacity: 1;
+    transition: 1.2s;
+    margin: 5px 0;
+}
+
+/*//////////////////////////////////////////*/
+
+.offer_container{
+    height: 92vh;
+}
+.offer_contant{
+    width: 82%;
+    height: 55%;
+    margin: auto;
+}
+.offer_card2{
+    margin: 0 5%;
+}
+.offer_card{
+    float: left;
+    width: 30%;
+    height: 45%;
+    margin-bottom: 3%;
+    padding: 30px 20px;
+    border: 1px solid #525252;
+    position: relative;
+}
+.offer_card::after{
+    content: "";
+    background-color: #525252;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: -1;
+}
+.offer_card:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+.offer_card:hover h2{
+    transition: 0.5s;
+    color: #fff;
+}
+.offer_card .left_side{
+    float: left;
+}
+.offer_card .right_side{
+    float: left;
+    margin-left: 20px;
+}
+.offer_card i{
+    font-size: 35px;
+    color:rgb(142, 132, 60);
+}
+.offer_card p{
+    font-size: 16px;
+    color:#8b8a8a;
+    margin-top: 15px;
+    line-height: 25px;
+}
+/*////////////////////////////////////***/
+
+.Choose_container{
+    height: 92vh;
+    background-color:rgb(230, 230, 230);
+    padding-top: 10%;
+}
+.choose_content{
+    width: 82%;
+    height: 80%;
+    margin: auto;
+}
+.choose_left_side{
+    float: left;
+}
+.choose_left_side .line{
+    margin-left: 0;
+}
+.choose_left_side p{
+    color: #8b8a8a;
+}
+.choose_left_side .first_p{
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+.choose_left_side p i{
+    color:rgb(142, 132, 60);
+    font-size: 20px;
+    margin-right: 2px;
+    margin-bottom: 12px;
+}
+.choose_right_side{
+    height: 100%;
+    width: 50%;
+    float: right;
+}
+.choose_img{
+    height: 94%;
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+}
+.choose_img .choose_img_cover{
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+.choose_img img{
+    height: 100%;
+    width: 100%;
+}
+.choose_dots {
+    text-align: center;
+    margin-top: 6px;
+}
+.choose_dots .fa-circle{
+    font-size: 11px;
+    margin-left: 10px;
+    color: #bcbcbc;
+}
+.choose_dots .dot1{
+    color: rgb(124, 116, 52);
+}
+
+/*///////////////////////////////////////////////*/
+
+.rate_container{
+    height: 350px;
+    background-image: url(../images/rate_cover.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.rate_container .rate_cover{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.rate_contant{
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+.rate_card{
+    width: 25%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    color: #fff;
+    padding-top:130px;
+}
+.rate_card i{
+    font-size: 28px;
+    color: rgb(142, 132, 60);
+    margin-bottom: 10px;
+}
+
+/*//////////////////////////////////*/
+.pricing_container{
+    height: 98vh;
+    background-color: rgb(230, 230, 230);
+}
+.pricing_cover{
+    width: 80%;
+    height: 350px;
+    margin: auto;
+}
+.pricing_card{
+    float: left;
+    height: 100%;
+    width: 30%;
+    border: 1px solid rgb(142, 132, 60);
+    text-align: center;
+    padding: 30px 0;
+    color: #8b8a8a;
+    position: relative;
+}
+.pricing_card_content{
+    height: 100%;
+    width: 100%;
+    z-index: 8;
+    position: relative;
+}
+.pricing_card::after{
+    content: "";
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background-color: rgb(142, 132, 60);
+    position: absolute;
+    transition: 0.5s;
+    z-index: 5;
+}
+.pricing_card:hover::after{
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+.pricing_card2{
+    margin: 0 5%;
+}
+.pricing_card h1{
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    padding-top: 10px;
+    border: 1px solid rgb(98, 91, 41);
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #000;
+}
+.pricing_card h1 span{
+    font-size: 15px;
+}
+.pricing_card p{
+    margin: 10px 0;
+}
+.pricing_card button{
+    height: 25px;
+    width: 120px;
+    border: 2px solid rgb(98, 91, 41);
+    background-color:transparent;
+    margin-top: 10px;
+}
+.pricing_card:hover h1 , .pricing_card:hover .pricing_caption{
+    color: #700707;
+    transition: 1s;
+}
+.pricing_card:hover .pricing_caption{
+    transition: 0.1s;
+}
+ .pricing_card:hover p{
+    color: #fff;
+    transition: 0.5s;
+}
+/*////////////////////////////////////*/
+.identification_container{
+    height: 350px;
+    background-image: url(../images/identification_cover.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.identification_container .identification_cover{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.identification_contant{
+    height: 100%;
+    width: 70%;
+    margin: auto;
+}
+.identification_card{
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding:130px 40px;
+}
+.identification_up_side{
+    height: 70px;
+}
+.identification_img{
+   width: 70px;
+   height: 70px;
+   float: left;
+}
+.identification_up_side img{
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+}
+.identification_title{
+    float: left;
+    height: 100%;
+    padding: 15px 15px;
+}
+.identification_title h3{
+    color: #fff;
+}
+.identification_up_side .identification_title p{
+    color:rgb(103, 103, 255);
+    margin-top: 5px;
+}
+.identification_down_side{
+    width: 100%;
+    margin: 20px 15px;
+    font-size: 14px;
+    color: #fff;
+}
+/*//////////////////////////////////////////////////////*/
+
+.ourTeam_content{
+    width: 70%;
+    height: 280px;
+    margin: auto;
+}
+.ourTeam_card{
+    float: left;
+    width: 30%;
+    height: 100%;
+    background-color:rgb(199, 198, 198);
+    padding: 20px 2%;
+    position: relative;
+}
+.ourTeam_card::after{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+.ourTeam_card:hover::after{
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+}
+.ourTeam_card2{
+    margin: 0 5%;
+}
+.ourTeam_img{
+    height: 190px;
+    margin: auto;
+    position: relative;
+}
+.ourTeam_img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.ourTeam_icons{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    visibility: hidden;
+    
+}
+.ourTeam_icons i{
+    background-color: rgb(142, 132, 60);
+    color: #fff;
+    font-size: 14px;
+    width: 40px;
+    height: 45px;
+    text-align: center;
+    padding: 15px 0;
+    display:block;
+    margin-left: 85.5%;
+}
+.ourTeam_card:hover .ourTeam_icons, .ourTeam_card:hover .ourTeam_name h4{
+    visibility: visible;
+    color: #fff;
+    transition: 1s;
+}
+.ourTeam_name{
+    text-align: center;
+    padding-top: 15px;
+    line-height: 23px;
+}
+.ourTeam_name p{
+    color:#8b8a8a;
+}
+
+/*//////////////////////////////////*/
+
+.News_content{
+    margin: auto;
+    width: 80%;
+    height: 500px;
+    background-color:rgb(243, 243, 243);
+}
+.News_card{
+    width: 30%;
+    height: 100%;
+    background-color: #fff;
+    float: left;
+    padding: 0 20px;
+    position: relative;
+}
+.News_card::after{
+    content: "";
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background-color:rgba(124, 116, 52, 0.5);
+    position: absolute;
+    visibility: hidden;
+    transition: 1s;
+}
+.News_card:hover::after{
+    height: 100%;
+    visibility: visible;
+}
+.News_card2{
+    margin: 0 5%;
+}
+.News_img{
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+}
+.News_img img{
+    width: 75%;
+    height: 100%;
+}
+.News_downSide{
+    padding-top: 35px ;
+}
+.News_downSide span{
+    font-size: 13px;
+    margin-right:15px;
+}
+.News_downSide i{
+    color: rgb(142, 132, 60);
+}
+.News_downSide h3{
+    margin: 25px 0 ;
+}
+.News_downSide p{
+    color:#8b8a8a;
+    margin-bottom: 30px ;
+}
+.News_downSide a{
+    text-decoration: none;
+    color: rgb(142, 132, 60) ;
+}
+
+/*/////////////////////////////////////*/
+
+.footer{
+    width: 100%;
+    height: 350px;
+    background-color: rgb(98, 91, 41);
+    text-align: center;
+    padding: 70px 0;
+}
+.footer img{
+    width: 180px;
+    height: 100px;
+    margin: auto;
+    display: block;
+}
+.footer i{
+    color: #fff;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(142, 132, 60);
+    padding-top: 15px;
+    margin: 30px 0 20px;
+}
+.footer i:hover{
+    background-color:rgb(124, 116, 52);
+    transition: 0.4s;
+}
+.footer p{
+    font-size: 12px;
+    color: #fff;
+}
